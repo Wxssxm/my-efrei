@@ -1,0 +1,14 @@
+export const promotions = [
+  {
+    id: 1,
+    name: "B3 DEV",
+  },
+  {
+    id: 2,
+    name: "B3 QA",
+  },
+  {
+    id: 3,
+    name: "B3 PROD",
+  },
+];

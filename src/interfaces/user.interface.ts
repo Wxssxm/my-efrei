@@ -1,3 +1,4 @@
+import { RoleEnum } from "../enums/role.enum";
 import { GradeInterface } from "./grade.interface";
 
 import { PromotionInterface } from "./promotion.interface";
@@ -8,7 +9,7 @@ export interface UserInterface {
   lastName: string;
   email: string;
   password: string;
-  role: string;
+  role: RoleEnum;
   promotions: PromotionInterface[];
   course?: string;
   grades: GradeInterface[];

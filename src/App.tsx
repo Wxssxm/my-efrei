@@ -4,6 +4,7 @@ import { PrivateRoute } from "./components/PrivateRoute/PrivateRoute";
 import { Login } from "./pages/Login/Login";
 import { AuthContextProvider } from "./providers/AuthContext";
 import { Home } from "./pages/Home/Home";
+import { Logout } from "./pages/Logout/Logout";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/logout",
+        element: <Logout />,
       },
     ],
   },
