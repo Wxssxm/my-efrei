@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { RoleEnum } from "../../enums/role.enum";
 import "./Navbar.css";
+import { RoleEnum } from "../../enums/role.enum";
 export const Navbar = ({ role }: { role: RoleEnum }) => {
   const linksByRole = [
     {
