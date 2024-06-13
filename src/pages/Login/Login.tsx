@@ -28,27 +28,23 @@ export const Login = () => {
     };
     return (
         <div className="login-container">
-            <div className="left">
-                <form onSubmit={(e) => handleLogin(e)}>
-                    <div className="title-form">Connectez-vous :</div>
-                    <input
-                        type="text"
-                        name="mail"
-                        className="input-email"
-                        placeholder="Adresse e-mail"
-                    />
-                    <input
-                        type="password"
-                        name="password"
-                        className="input-password"
-                        placeholder="Mot de passe"
-                    />
-                    <div className="btn-submit-container">
-                        <input type="submit" value="Connexion" />
-                    </div>
-                    <div className="error-placeholder">{error}</div>
-                </form>
-            </div>
+            <form onSubmit={(e) => handleLogin(e)}>
+                <h1 className="title-form">Connectez-vous :</h1>
+                <input
+                    type="text"
+                    name="mail"
+                    className="input-email"
+                    placeholder="Adresse e-mail"
+                />
+                <input
+                    type="password"
+                    name="password"
+                    className="input-password"
+                    placeholder="Mot de passe"
+                />
+                <input type="submit" value="Connexion" />
+                <div className="error-placeholder">{error}</div>
+            </form>
         </div>
     );
 };

@@ -1,9 +1,9 @@
 import { RoleEnum } from "../../enums/role.enum";
 import { useAuth } from "../../hooks/auth.hook";
 import "./Grades.css";
-import { GradesPromotionItem } from "../../components/Grades/GradesPromotionItem/GradesPromotionItem";
 import { promotions } from "../../db/promotions";
 import { Navigate } from "react-router-dom";
+import { LineItem } from "../../components/LineItem/LineItem";
 export const Grades = () => {
     const { user } = useAuth();
     if (user?.role === RoleEnum.STUDENT) {
@@ -13,8 +13,10 @@ export const Grades = () => {
                 <ul>
                     {user.grades!.map((grade, index) => (
                         <li key={index}>
-                            <span>Matière: {grade.course}</span>
-                            <span>Note: {grade.grade}</span>
+                            <LineItem
+                                title={grade.course}
+                                subtitle={grade.grade.toString()}
+                            />
                         </li>
                     ))}
                 </ul>
@@ -32,11 +34,17 @@ export const Grades = () => {
                 <h1>Promotions</h1>
                 <ul>
                     {teacherPromotions.map((promotion, index) => (
-                        <GradesPromotionItem
-                            key={index}
-                            promotion={promotion}
-                            course={user.course!}
-                        />
+                        <li key={index}>
+                            <LineItem
+                                title={promotion.name}
+                                links={[
+                                    {
+                                        href: "/grades/" + promotion.id,
+                                        text: "Voir les notes",
+                                    },
+                                ]}
+                            />
+                        </li>
                     ))}
                 </ul>
             </div>

@@ -1,9 +1,16 @@
-.promotions ul {
+.promotions {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    margin-top: 50px;
 
+    ul {
+        width: 80%;
+        padding: 0;
+    }
 
-
+    li {
+        margin: 1vh 0;
+    }
 }

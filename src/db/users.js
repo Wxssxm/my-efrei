@@ -50,7 +50,6 @@ export const users = [
         role: "ROLE_STUDENT",
         promotions: [1],
         grades: [
-            { course: "Maths", grade: 16 },
             { course: "Physics", grade: 15 },
             { course: "English", grade: 15 },
         ],

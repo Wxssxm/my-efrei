@@ -1,0 +1,38 @@
+.line-item {
+    width: inherit;
+    padding: 1vh 2vw;
+    background-color: #78c2ff;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+
+    * {
+        width: calc(100% - 4vw);
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 20%;
+        padding: 0;
+        margin: 0;
+
+        li {
+            list-style: none;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    }
+}

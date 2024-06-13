@@ -1,0 +1,16 @@
+.courses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    ul {
+        width: 80%;
+        padding: 0;
+    }
+
+    li {
+        margin: 1vh 0;
+    }
+}

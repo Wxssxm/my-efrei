@@ -2,6 +2,7 @@ import { useAuth } from "../../hooks/auth.hook";
 import "./Courses.css";
 import { users } from "../../db/users";
 import { RoleEnum } from "../../enums/role.enum";
+import { LineItem } from "../../components/LineItem/LineItem";
 
 export const Courses = () => {
     const { user } = useAuth();
@@ -14,14 +15,16 @@ export const Courses = () => {
 
     return (
         <div className="courses">
-            {teachers.map((teacher, index) => (
-                <div key={index} className="course">
-                    <div className="teacher-name">
-                        {teacher.firstName + " " + teacher.lastName}
-                    </div>
-                    <div className="course-name">{teacher.course}</div>
-                </div>
-            ))}
+            <ul>
+                {teachers.map((teacher, index) => (
+                    <li key={index}>
+                        <LineItem
+                            title={teacher.course!}
+                            subtitle={`${teacher.firstName} ${teacher.lastName}`}
+                        />
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 };
